@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    <title>Cambio de contrasena</title>
+    <title>Email</title>
     <style>
         :root{
             --white: #FFFFFF;
@@ -38,6 +38,7 @@
             grid-template-rows: auto 1fr
             auto;
             width: 300px;
+            justify-items: center;
 
         }
         .logo{
@@ -62,21 +63,33 @@
             text-align: center;
         }
 
-        .label{
+     
+        .email-image{
+            width: 132px;
+            height: 132px;
+            border-radius: 50%;
+            background-color:var(--text-input-field);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+
+        .email-image img{
+            width: 80px;
+        }
+
+        .resend{
             font-size: var(--sm);
-            font-weight: bold;
+        }
+        .resend span{
+            color: var(--very-light-pink);
         }
 
-        .input{
-            background-color: var(--text-input-field);
-            border: none;
-            border-radius: 8px;
-            height: 30px;
-            font-size: var(--md);
-            padding: 6px;
-
+        .resend a{
+            color: var(--hospital-green);
+            text-decoration: none;
         }
-
         .form{
             display: flex;
             flex-direction: column;
@@ -97,10 +110,12 @@
             font-size: var(--md);
             height: 50px;
         }
+        
         .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
         }
+       
 
         @media (max-width:640px){
             .logo{
@@ -115,24 +130,21 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo"
             class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p  class="subtitle">Enter a new password for a new account</p>
-            <form action="/" class="form">
-                <label for="password" class="label">Password</label>
-                <input type="password"
-                id="password" placeholder="***********"
-                class="input input-password">
-
-                <label for="new-password" class="label">Password</label>
-                <input type="password"
-                id="new-password" placeholder="***********"
-                class="input input-password">
-
-                <input type="submit" 
-                value="Confirm" class="primary-button
-                login-button">
-            </form>
+            <h1 class="title">Email has been sent!</h1>
+            <p  class="subtitle">Please check your inbox for instruccions on how to reset the password</p>
+            
+            
+            <div class="email-image">
+                <img src="./icons/email.svg" alt="email">
+            </div>
+            <button class="primary-button">Login</button>
         </div>
+        <p class="resend">
+            <span>Didn't recive the email?              
+            </span>
+            <a href="/">Resend</a>
+        </p>
+        
     </div>
 </body>
 </html>
