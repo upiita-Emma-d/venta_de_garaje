@@ -35,7 +35,8 @@
 
         .form-container{
             display: grid;
-	    grid-template-rows: auto 1fr auto;
+            grid-template-rows: auto 1fr
+            auto;
             width: 300px;
 
         }
@@ -81,7 +82,13 @@
             flex-direction: column;
             margin-bottom: 12px;
         }
-
+        .form a{
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 52px;
+        }
         .primary-button{
             background-color: var(--hospital-green);
             border-radius: 8px;
@@ -96,6 +103,22 @@
             font-size: var(--md);
             height: 50px;
         }
+
+        .secondary-button{
+            background-color: var(--white);
+            border-radius: 8px;
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+            width: 100%;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            font-size: var(--md);
+            height: 50px;
+        }
+        .input-email{
+            margin-bottom: 22px;
+        }
         .login-button{
             margin-top: 14px;
             margin-bottom: 30px;
@@ -104,6 +127,12 @@
         @media (max-width:640px){
             .logo{
                 display: block;
+            }
+            .secondary-button{
+                width: 300px;
+                position: absolute;
+                bottom: 0;
+                margin-bottom: 24px;
             }
 
         }
@@ -114,23 +143,28 @@
         <div class="form-container">
             <img src="./logos/logo_yard_sale.svg" alt="logo"
             class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p  class="subtitle">Enter a new password for a new account</p>
+            
             <form action="/" class="form">
-                <label for="password" class="label">Password</label>
-                <input type="password"
-                id="password" placeholder="***********"
-                class="input input-password">
+                <label for="Email" class="label">Email address</label>
+                <input type="email"
+                id="email" placeholder="axeldiaz@puebas.com"
+                class="input input-email">
 
-                <label for="new-password" class="label">Password</label>
-                <input type="password"
-                id="new-password" placeholder="***********"
-                class="input input-password">
+                <label for="Email" class="label">Email address</label>
+                <input type="email"
+                id="email" placeholder="axeldiaz@puebas.com"
+                class="input input-email">
+
 
                 <input type="submit" 
-                value="Confirm" class="primary-button
+                value="Log in" class="primary-button
                 login-button">
+                <a href="/">Forgot my password
+
+                </a>
+
             </form>
+            <button class="secondary-button"> Sing Up</button>
         </div>
     </div>
 </body>
